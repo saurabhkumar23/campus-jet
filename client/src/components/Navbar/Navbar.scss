@@ -1,0 +1,27 @@
+#navbar {
+    nav {
+        padding: 0 100px;
+        background: none;
+    }
+    .mobileLogoutButton{
+        padding: 0 32px;
+        font-weight: 500;
+        cursor: pointer;
+    }
+    a {
+        color : black !important;
+    }
+    .brand-logo {
+        font-family: 'Rubik', sans-serif;
+        letter-spacing: -1.3px;
+    }
+    button, i{
+        margin: 0 15px;
+    }
+}
+
+@media (max-width: 576px){
+    nav{
+        padding: 0 !important;
+    }
+}

@@ -1,0 +1,64 @@
+.form-main-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.form-main-container .new-password-form {
+  margin-right: 150px;
+}
+
+.form-main-container .new-password-form h2 {
+  font-family: 'Rubik', sans-serif;
+  letter-spacing: -1.3px;
+}
+
+.form-main-container .new-password-form .card {
+  padding: 70px 20px;
+  text-align: center;
+  width: 400px;
+  margin: 80px auto;
+}
+
+.form-main-container .new-password-form .input-field input[type=text]:focus {
+  border-bottom: 1px solid #64b5f6;
+  -webkit-box-shadow: 0 1px 0 0  #64b5f6;
+          box-shadow: 0 1px 0 0  #64b5f6;
+}
+
+.form-main-container .new-password-form .input-field input[type=password]:focus {
+  border-bottom: 1px solid #64b5f6;
+  -webkit-box-shadow: 0 1px 0 0  #64b5f6;
+          box-shadow: 0 1px 0 0  #64b5f6;
+}
+
+.form-main-container .new-password-form h6 {
+  margin: 30px;
+}
+
+.form-main-container .new-password-form .password-field {
+  position: relative;
+}
+
+.form-main-container .new-password-form .password-field span {
+  position: absolute;
+  top: 15px;
+  right: 5px;
+  cursor: pointer;
+}
+
+@media (max-width: 576px) {
+  .form-main-container .logo {
+    display: none;
+  }
+  .form-main-container .new-password-form {
+    margin-right: 0 !important;
+  }
+  .form-main-container .new-password-form .card {
+    max-width: 350px;
+  }
+}
+/*# sourceMappingURL=NewPass.css.map */

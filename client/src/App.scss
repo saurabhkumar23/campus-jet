@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap');
+@import './components/Navbar/Navbar.scss';
+@import './components/screen/Login/Login.scss';
+@import './components/screen/Signup/Signup.scss';
+@import './components/screen/ResetPass/ResetPass.scss';
+@import './components/screen/Home/Home.scss';
+@import './components/screen/CreatePost/CreatePost.scss';
+@import './components/screen/MemeGenerator/MemeGenerator.scss';
+@import './components/screen/NewPass/NewPass.scss';
+@import './components/screen/Profile/Profile.scss';
+@import './components/screen/Opportunity/Opportunity.scss';
+@import './components/screen/Users/Users.scss';
+
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    .example::-webkit-scrollbar {
+        display: none;
+      }
+      
+      /* Hide scrollbar for IE, Edge and Firefox */
+      .example {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+      }
+}
+
+.material-icons:hover  {
+    cursor : pointer
+}
+
+.preloader-wrapper{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.error-page{
+    margin: 100px auto;
+    text-align: center;
+    color: grey;
+}
+
+

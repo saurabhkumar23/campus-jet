@@ -1,0 +1,72 @@
+.form-main-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.form-main-container .signup-form h2 {
+  font-family: 'Rubik', sans-serif;
+  letter-spacing: -1.3px;
+}
+
+.form-main-container .signup-form .card {
+  padding: 20px;
+  text-align: center;
+  margin: 80px auto;
+  min-width: 400px;
+  width: 35vw;
+}
+
+.form-main-container .signup-form .input-field input[type=text]:focus {
+  border-bottom: 1px solid #64b5f6;
+  -webkit-box-shadow: 0 1px 0 0  #64b5f6;
+          box-shadow: 0 1px 0 0  #64b5f6;
+}
+
+.form-main-container .signup-form .input-field input[type=password]:focus {
+  border-bottom: 1px solid #64b5f6;
+  -webkit-box-shadow: 0 1px 0 0  #64b5f6;
+          box-shadow: 0 1px 0 0  #64b5f6;
+}
+
+.form-main-container .signup-form h6 {
+  margin: 30px;
+}
+
+.form-main-container .signup-form .password-field {
+  position: relative;
+}
+
+.form-main-container .signup-form .password-field span {
+  position: absolute;
+  top: 15px;
+  right: 5px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .logo {
+    display: none;
+  }
+  .signup-form {
+    margin-right: 0 !important;
+  }
+  .signup-form .card {
+    margin: 40px 40px !important;
+  }
+  .signup-form .card h2 {
+    font-size: 2.5rem;
+    margin: 8px 0;
+  }
+  .signup-form .card h6 {
+    font-size: 0.9rem;
+  }
+  .signup-form .card .file-field .btn {
+    font-size: 9px;
+    padding: 0 9px;
+  }
+}
+/*# sourceMappingURL=Signup.css.map */

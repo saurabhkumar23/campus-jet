@@ -1,0 +1,133 @@
+.home .card {
+  max-width: 500px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  margin: 26px auto;
+}
+
+.home .card .heart-icon {
+  color: #ef5350 !important;
+}
+
+.home .card .main-head {
+  padding: 17px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.home .card .main-head .profile-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.home .card .main-head .profile-link h5 {
+  margin: 0;
+  margin-left: 10px;
+  font-size: 1.2em;
+}
+
+.home .card .main-head .profile-link .side-image {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.home .card .main-head a {
+  color: black;
+}
+
+.home .card .card-content input {
+  border: none;
+  border-top: 1px solid #d6d4d4;
+}
+
+.home .card .card-content input:focus {
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  border-bottom: none !important;
+}
+
+.home .card .card-content .comment-box {
+  margin: 15px 0;
+}
+
+.home .card .card-content .comment-box p span {
+  font-size: 1.3em;
+  font-weight: 500;
+  margin-right: 10px;
+}
+
+.home .card .card-content .comment-box a {
+  color: black;
+}
+
+.home .pagination {
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.drives .heading {
+  font-size: 4rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 6rem 0 2rem 0;
+  letter-spacing: 3px;
+}
+
+.drives .drives-container a {
+  color: inherit;
+}
+
+.drives .drives-container .card-title {
+  font-size: 2.5rem !important;
+  margin: 0 0 25px 0 !important;
+}
+
+.drives .drives-container .date {
+  color: gray;
+  font-weight: bold;
+  margin-left: 5px !important;
+}
+
+.drives .drives-container .data {
+  margin-top: 5px !important;
+  margin-left: 5px !important;
+}
+
+.drives .drives-container .card {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  padding: 10px;
+}
+
+@media (max-width: 576px) {
+  .home .card {
+    margin: 0;
+  }
+  .home .card .main-head {
+    padding: 8px;
+  }
+  .home .card .card-content {
+    padding: 12px;
+  }
+}
+/*# sourceMappingURL=Home.css.map */

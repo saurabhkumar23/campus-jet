@@ -1,0 +1,33 @@
+.create-post-form h2 {
+  font-family: 'Grand Hotel', cursive;
+}
+
+.create-post-form .card {
+  padding: 20px;
+  text-align: center;
+  max-width: 400px;
+  margin: 80px auto;
+}
+
+.create-post-form .input-field input[type=text]:focus {
+  border-bottom: 1px solid #64b5f6;
+  -webkit-box-shadow: 0 1px 0 0  #64b5f6;
+          box-shadow: 0 1px 0 0  #64b5f6;
+}
+
+.create-post-form .input-field input[type=password]:focus {
+  border-bottom: 1px solid #64b5f6;
+  -webkit-box-shadow: 0 1px 0 0  #64b5f6;
+          box-shadow: 0 1px 0 0  #64b5f6;
+}
+
+.create-post-form h6 {
+  margin: 30px;
+}
+
+@media (max-width: 576px) {
+  .create-post-form {
+    margin: 0 50px;
+  }
+}
+/*# sourceMappingURL=CreatePost.css.map */

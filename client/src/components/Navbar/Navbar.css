@@ -1,0 +1,26 @@
+#navbar nav {
+  padding: 0 100px;
+  background: none;
+}
+
+#navbar .mobileLogoutButton {
+  padding: 0 32px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+#navbar a {
+  color: black !important;
+}
+
+#navbar .brand-logo {
+  font-family: 'Rubik', sans-serif;
+  letter-spacing: -1.3px;
+}
+
+@media (max-width: 576px) {
+  nav {
+    padding: 0 !important;
+  }
+}
+/*# sourceMappingURL=Navbar.css.map */

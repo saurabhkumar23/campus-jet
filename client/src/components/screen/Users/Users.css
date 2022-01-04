@@ -1,0 +1,44 @@
+.users-section .heading {
+  font-size: 4rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 6rem 0 2rem 0;
+  letter-spacing: 3px;
+}
+
+.users-section .user-container a {
+  color: inherit;
+}
+
+.users-section .user-container .card-title {
+  font-size: 2.5rem !important;
+  margin-bottom: 0 !important;
+}
+
+.users-section .user-container .date {
+  color: gray;
+  font-weight: bold;
+  margin-left: 5px !important;
+}
+
+.users-section .user-container .data {
+  margin-top: 5px !important;
+  margin-left: 5px !important;
+}
+
+.users-section .user-container .card-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.users-section .user-container .card-content p {
+  font-size: 2.7rem;
+}
+/*# sourceMappingURL=Users.css.map */

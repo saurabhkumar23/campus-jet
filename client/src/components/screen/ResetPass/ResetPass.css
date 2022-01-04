@@ -1,0 +1,56 @@
+.form-main-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.form-main-container .reset-password-form h2 {
+  font-family: 'Rubik', sans-serif;
+  letter-spacing: -1.3px;
+}
+
+.form-main-container .reset-password-form .card {
+  padding: 70px 20px;
+  text-align: center;
+  margin: 80px auto;
+  min-width: 400px;
+  width: 35vw;
+}
+
+.form-main-container .reset-password-form .input-field input[type=text]:focus {
+  border-bottom: 1px solid #64b5f6;
+  -webkit-box-shadow: 0 1px 0 0  #64b5f6;
+          box-shadow: 0 1px 0 0  #64b5f6;
+}
+
+.form-main-container .reset-password-form .input-field input[type=password]:focus {
+  border-bottom: 1px solid #64b5f6;
+  -webkit-box-shadow: 0 1px 0 0  #64b5f6;
+          box-shadow: 0 1px 0 0  #64b5f6;
+}
+
+.form-main-container .reset-password-form h6 {
+  margin: 30px;
+}
+
+@media (max-width: 768px) {
+  .logo {
+    display: none;
+  }
+  .reset-password-form {
+    margin-right: 0 !important;
+  }
+  .reset-password-form .card {
+    width: 70vw !important;
+    padding: 50px 20px !important;
+    margin: 40px 40px !important;
+  }
+  .reset-password-form .card h2 {
+    font-size: 2.5rem;
+    margin: 8px 0 !important;
+  }
+}
+/*# sourceMappingURL=ResetPass.css.map */

@@ -1,0 +1,48 @@
+.form-main-container{
+    display: flex;
+    justify-content: space-evenly;
+    .reset-password-form{
+        h2 {
+            font-family: 'Rubik', sans-serif;
+        letter-spacing: -1.3px;
+        }
+        .card  {
+            padding: 70px 20px;
+            text-align: center;
+            // width: 400px;
+            margin: 80px auto;
+            min-width: 400px;
+            width: 35vw;
+        }
+        .input-field input[type=text]:focus {
+            border-bottom: 1px solid #64b5f6;
+            box-shadow: 0 1px 0 0  #64b5f6;
+        }
+        .input-field input[type=password]:focus {
+            border-bottom: 1px solid #64b5f6;
+            box-shadow: 0 1px 0 0  #64b5f6;
+        }
+        h6 {
+            margin: 30px;
+        }
+        // margin-right: 150px;
+    }
+}
+
+@media (max-width: 768px){
+    .logo{
+        display: none;
+    }
+    .reset-password-form{
+        margin-right: 0 !important;
+        .card{
+            width: 70vw !important;
+            padding: 50px 20px !important;
+            margin: 40px 40px !important;
+            h2{
+                font-size: 2.5rem;
+                margin: 8px 0 !important;
+            }
+        }
+    }
+}
