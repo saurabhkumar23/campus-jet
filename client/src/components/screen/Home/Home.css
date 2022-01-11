@@ -81,11 +81,10 @@
 }
 
 .drives .heading {
-  font-size: 4rem;
+  font-size: 3.3rem;
   font-weight: bold;
   text-align: center;
   margin: 6rem 0 2rem 0;
-  letter-spacing: 3px;
 }
 
 .drives .drives-container a {

@@ -3,28 +3,29 @@
 }
 
 .opportunity-container .card-title {
-  font-size: 5.8rem !important;
-  line-height: 6.8rem !important;
+  font-size: 4.5rem !important;
+  line-height: 5.5rem !important;
   font-weight: 500;
 }
 
 .opportunity-container .date {
-  font-size: 1.5rem;
-  line-height: 4rem;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  margin-bottom: 20px !important;
 }
 
 .opportunity-container .desc {
-  font-size: 3.5rem;
-  line-height: 5rem;
+  font-size: 1.8rem;
+  line-height: 2.6rem;
 }
 
 .opportunity-container .card-content {
-  padding: 10rem 4.5rem;
+  padding: 4rem 3.5rem;
 }
 
 .opportunity-container .card-content .apply-link {
-  width: 32%;
-  padding: 3rem;
+  width: 22%;
+  padding: 2.4rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -34,7 +35,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-size: 2rem;
+  font-size: 1.5rem;
   border-radius: 8px;
   margin: 0 auto;
 }
@@ -44,13 +45,13 @@
 }
 
 .opportunity-container table .data {
-  font-size: 2.3rem;
+  font-size: 1.8rem;
   font-weight: lighter;
 }
 
 .opportunity-container table .heading {
   font-weight: bold;
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 
 .opportunity-container .edit-link {
@@ -85,7 +86,7 @@
 }
 
 .opportunity-container .back-container div {
-  font-size: 2rem;
+  font-size: 1.6rem;
   margin-left: 10px;
 }
 
@@ -151,6 +152,10 @@
   font-weight: 500;
 }
 
+.opportunity-container .edit-link i {
+  font-size: 40px !important;
+}
+
 .opportunity-container .profile-gallery div {
   height: 183.33px;
   padding: 0.75rem 0.75rem;
@@ -177,4 +182,4 @@
   -webkit-transform: translateY(-22px) scale(0.8) !important;
   transform: translateY(-22px) scale(0.8) !important;
 }
-/*# sourceMappingURL=opportunity.css.map */
+/*# sourceMappingURL=Opportunity.css.map */

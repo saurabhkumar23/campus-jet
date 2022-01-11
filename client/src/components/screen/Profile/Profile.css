@@ -7,18 +7,22 @@
   display: flex;
 }
 
+.profile .delete-div i {
+  font-size: 40px !important;
+}
+
 .profile table {
   margin: 50px 0;
 }
 
 .profile table .data {
-  font-size: 2.3rem;
+  font-size: 1.8rem;
   font-weight: lighter;
 }
 
 .profile table .heading {
   font-weight: bold;
-  font-size: 2.5rem;
+  font-size: 2.2rem;
 }
 
 .profile .head {
@@ -31,11 +35,16 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin: 2.5rem;
 }
 
 .profile .edit-link {
   color: inherit;
   margin-left: auto;
+}
+
+.profile .edit-link i {
+  font-size: 40px;
 }
 
 .profile .delete-div {
@@ -48,11 +57,9 @@
 }
 
 .profile .card-title {
-  margin-bottom: 120px !important;
-  font-size: 4rem;
+  font-size: 3.3rem;
   font-weight: bold;
   text-align: center;
-  margin: 6rem 0 2rem 0;
   letter-spacing: 3px;
 }
 
@@ -133,6 +140,26 @@
      object-fit: cover;
   width: 100%;
   height: 100%;
+}
+
+.oppor-details table {
+  margin: 10px 0;
+}
+
+.oppor-details table .data {
+  font-size: 1.2rem;
+  font-weight: lighter;
+}
+
+.oppor-details table .heading {
+  font-weight: bold;
+  font-size: 1.4rem;
+  width: 300px;
+}
+
+.oppor-details .card-content {
+  padding: 0.7rem;
+  margin: 0.7rem;
 }
 
 @media (max-width: 576px) {

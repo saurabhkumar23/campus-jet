@@ -12,80 +12,146 @@ const Opportunity = () => {
 
   //usestates
   const [data, setData] = useState(null);
+  const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(false);
   const [isAdmin, setIsAdmin] = useState(false);
   const [isOtpNeeded, setIsOtpNeeded] = useState(false);
   const [otp, setOtp] = useState("");
   const [month, setMonth] = useState({
-    '1' : 'January',
-    '2' : 'February',
-    '3' : 'March',
-    '4' : 'April',
-    '5' : 'May',
-    '6' : 'June',
-    '7' : 'July',
-    '8' : 'August',
-    '9' : 'September',
+    '01' : 'January',
+    '02' : 'February',
+    '03' : 'March',
+    '04' : 'April',
+    '05' : 'May',
+    '06' : 'June',
+    '07' : 'July',
+    '08' : 'August',
+    '09' : 'September',
     '10' : 'October',
     '11' : 'November',
     '12' : 'December',
 })
 
+useEffect(() => {
+    if(state){
+        setLoading(true);
+        fetch("/current-user", {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("jwt")}`,
+          },
+        })
+          .then((res) => res.json())
+          .then((result) => {
+            if (result?.error) {
+              M.toast({ html: result?.error, classes: "#c62828 red darken-3" });
+              history.push("/opportunity");
+            } else {
+              setUser(result)
+            }
+            setLoading(false);
+          })
+          .catch((error) => {
+            M.toast({ html: error, classes: "#c62828 red darken-3" });
+            setLoading(false);
+          });
+    }
+    
+  }, []);
+
   useEffect(() => {
-    setLoading(true)
-    fetch('/isAdmin',{
-        headers: {
-            "Authorization" : `Bearer ${localStorage.getItem('jwt')}`
-        }
-    })
-    .then((res) => res.json())
-    .then((data) => {
-        if(data){
-            setIsAdmin(true);
-        }
-        setLoading(false)
-    })
-    .catch((error) => {
-        M.toast({html: error,classes:"#c62828 red darken-3"})
-        setLoading(false)
-    })
+      if(state){
+        setLoading(true)
+        fetch('/isAdmin',{
+            headers: {
+                "Authorization" : `Bearer ${localStorage.getItem('jwt')}`
+            }
+        })
+        .then((res) => res.json())
+        .then((data) => {
+            if(data){
+                setIsAdmin(true);
+            }
+            setLoading(false)
+        })
+        .catch((error) => {
+            M.toast({html: error,classes:"#c62828 red darken-3"})
+            setLoading(false)
+        })
+      }
+    
     // admin login then user not allowed
 },[])
 
   // api call to fetch my post
   useEffect(() => {
-    setLoading(true)
-    fetch(`/opportunity/${opportunityId}`,{
-        headers: {
-            "Authorization" : `Bearer ${localStorage.getItem('jwt')}`
-        }
-    })
-    .then((res) => res.json())
-    .then((result) => {
-        if(result?.error){
-            M.toast({html: result?.error,classes:"#c62828 red darken-3"})
-            history.push('/opportunity')
-        }
-        else{
-            if(result?.createdDate){
-            console.log(result);
-                let date = result.createdDate.split(' ')[0];
-            console.log(date);
-
-                let dateArr = date.split('/');
-            console.log(dateArr);
-
-            result.createdDate = dateArr[0] + ', ' + month[dateArr[1]] + ' ' + dateArr[2];
+      if(state){
+        setLoading(true)
+        fetch(`/opportunity/${opportunityId}`,{
+            headers: {
+                "Authorization" : `Bearer ${localStorage.getItem('jwt')}`
             }
-            setData(result);
-        }
-        setLoading(false)
-    })
-    .catch((error) => {
-        M.toast({html: error,classes:"#c62828 red darken-3"})
-        setLoading(false)
-    })
+        })
+        .then((res) => res.json())
+        .then((result) => {
+            if(result?.error){
+                M.toast({html: result?.error,classes:"#c62828 red darken-3"})
+                history.push('/opportunity')
+            }
+            else{
+                if(result?.createdDate){
+                console.log(result);
+                    let date = result.createdDate.split(' ')[0];
+                console.log(date);
+    
+                    let dateArr = date.split('/');
+                console.log(dateArr);
+    
+                result.createdDate = dateArr[0] + ', ' + month[dateArr[1]] + ' ' + dateArr[2];
+                }
+                setData(result);
+            }
+            setLoading(false)
+        })
+        .catch((error) => {
+            M.toast({html: error,classes:"#c62828 red darken-3"})
+            setLoading(false)
+        })
+      }
+   
 },[])
+
+const verifyOtp = () => {
+    setLoading(true);
+    fetch("/user/apply", {
+      method: "post",
+      headers: {
+        Authorization: `Bearer ${localStorage.getItem("jwt")}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        "userId" : user?.username,
+         opportunityId,
+         "referenceNo" : otp
+      })
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data?.error) {
+          M.toast({ html: data?.error, classes: "#c62828 red darken-3" });
+          isOtpNeeded(false);
+          setOtp("")
+        } else {
+          M.toast({ html: data?.message, classes: "#2e7d32 green darken-3" });
+          isOtpNeeded(false);
+          setOtp("")
+        }
+        setLoading(false);
+      })
+      .catch((error) => {
+        M.toast({ html: error, classes: "#c62828 red darken-3" });
+        setLoading(false);
+      });
+  }
 
   return (
     <>
@@ -100,7 +166,7 @@ const Opportunity = () => {
                   <div class="card-content">
                     <div className="back-container">
                         <Link to={`/opportunity`}>
-                            <i class="large material-icons">keyboard_backspace</i>
+                            <i class="material-icons">keyboard_backspace</i>
                             <div>All Opportunities</div>
                         </Link>
                         </div>
@@ -109,7 +175,7 @@ const Opportunity = () => {
                         <div>
                             {
                                 isAdmin ? <Link className="edit-link" to={ `/admin/editOpportunity/${data.id}`}> 
-                                            <i class="medium material-icons">edit</i>
+                                            <i class="material-icons">edit</i>
                                         </Link> 
                                 : null
                             }
@@ -177,7 +243,7 @@ const Opportunity = () => {
                       required
                     />
                     <button
-                    //   onClick={}
+                      onClick={verifyOtp}
                       style={{ marginTop: "20px" }}
                       className="btn btn-large waves-effect waves-light #64b5f6 blue darken-2"
                     >

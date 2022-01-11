@@ -4,25 +4,34 @@
         justify-content: center;
         display: flex;
     }
+    .delete-div{
+        i{
+            font-size: 40px !important;
+        }
+    }
     table{
         margin: 50px 0;
         .data{
-            font-size: 2.3rem;
+            font-size: 1.8rem;
             font-weight: lighter;
         }
         .heading{
             font-weight: bold;
-            font-size: 2.5rem;
+            font-size: 2.2rem;
         }
     }
     .head{
         display: flex;
         align-items: center;
         justify-content: center;
+        margin: 2.5rem;
     }
     .edit-link{
         color: inherit;
         margin-left: auto;
+        i{
+            font-size: 40px;
+        }
     }
     .delete-div{
         margin-left: auto;
@@ -32,11 +41,9 @@
         margin: 2rem;
     }
     .card-title{
-        margin-bottom:120px !important;
-        font-size: 4rem;
+        font-size: 3.3rem;
         font-weight: bold;
         text-align: center;
-        margin: 6rem 0 2rem 0;
         letter-spacing: 3px;
     }
     p{
@@ -99,6 +106,25 @@
             }
         }
     } 
+}
+
+.oppor-details{
+    table{
+        margin: 10px 0;
+        .data{
+            font-size: 1.2rem;
+            font-weight: lighter;
+        }
+        .heading{
+            font-weight: bold;
+            font-size: 1.4rem;
+            width: 300px;
+        }
+    }
+    .card-content{
+        padding: 0.7rem;
+        margin: 0.7rem;
+    }
 }
 
 @media (max-width: 576px){

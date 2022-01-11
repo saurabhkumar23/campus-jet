@@ -27,7 +27,7 @@ const EditProfile = () => {
       .then((result) => {
         if (result?.error) {
           M.toast({ html: result?.error, classes: "#c62828 red darken-3" });
-          history.push("/");
+          history.push("/opportunity");
         } else {
           setUsername(result?.username);
           setFirstName(result?.firstName);

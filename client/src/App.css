@@ -19,6 +19,10 @@
   letter-spacing: -1.3px;
 }
 
+#navbar button, #navbar i {
+  margin: 0 15px;
+}
+
 @media (max-width: 576px) {
   nav {
     padding: 0 !important;
@@ -305,11 +309,10 @@
 }
 
 .drives .heading {
-  font-size: 4rem;
+  font-size: 3.3rem;
   font-weight: bold;
   text-align: center;
   margin: 6rem 0 2rem 0;
-  letter-spacing: 3px;
 }
 
 .drives .drives-container a {
@@ -330,6 +333,17 @@
 .drives .drives-container .data {
   margin-top: 5px !important;
   margin-left: 5px !important;
+}
+
+.drives .drives-container .card {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  padding: 10px;
 }
 
 @media (max-width: 576px) {
@@ -499,18 +513,22 @@
   display: flex;
 }
 
+.profile .delete-div i {
+  font-size: 40px !important;
+}
+
 .profile table {
   margin: 50px 0;
 }
 
 .profile table .data {
-  font-size: 2.3rem;
+  font-size: 1.8rem;
   font-weight: lighter;
 }
 
 .profile table .heading {
   font-weight: bold;
-  font-size: 2.5rem;
+  font-size: 2.2rem;
 }
 
 .profile .head {
@@ -523,11 +541,16 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin: 2.5rem;
 }
 
 .profile .edit-link {
   color: inherit;
   margin-left: auto;
+}
+
+.profile .edit-link i {
+  font-size: 40px;
 }
 
 .profile .delete-div {
@@ -540,11 +563,9 @@
 }
 
 .profile .card-title {
-  margin-bottom: 120px !important;
-  font-size: 4rem;
+  font-size: 3.3rem;
   font-weight: bold;
   text-align: center;
-  margin: 6rem 0 2rem 0;
   letter-spacing: 3px;
 }
 
@@ -627,6 +648,26 @@
   height: 100%;
 }
 
+.oppor-details table {
+  margin: 10px 0;
+}
+
+.oppor-details table .data {
+  font-size: 1.2rem;
+  font-weight: lighter;
+}
+
+.oppor-details table .heading {
+  font-weight: bold;
+  font-size: 1.4rem;
+  width: 300px;
+}
+
+.oppor-details .card-content {
+  padding: 0.7rem;
+  margin: 0.7rem;
+}
+
 @media (max-width: 576px) {
   .profile .profile-head {
     -webkit-box-orient: vertical;
@@ -654,28 +695,29 @@
 }
 
 .opportunity-container .card-title {
-  font-size: 5.8rem !important;
-  line-height: 6.8rem !important;
+  font-size: 4.5rem !important;
+  line-height: 5.5rem !important;
   font-weight: 500;
 }
 
 .opportunity-container .date {
-  font-size: 1.5rem;
-  line-height: 4rem;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  margin-bottom: 20px !important;
 }
 
 .opportunity-container .desc {
-  font-size: 3.5rem;
-  line-height: 5rem;
+  font-size: 1.8rem;
+  line-height: 2.6rem;
 }
 
 .opportunity-container .card-content {
-  padding: 10rem 4.5rem;
+  padding: 4rem 3.5rem;
 }
 
 .opportunity-container .card-content .apply-link {
-  width: 32%;
-  padding: 3rem;
+  width: 22%;
+  padding: 2.4rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -685,7 +727,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-size: 2rem;
+  font-size: 1.5rem;
   border-radius: 8px;
   margin: 0 auto;
 }
@@ -695,13 +737,13 @@
 }
 
 .opportunity-container table .data {
-  font-size: 2.3rem;
+  font-size: 1.8rem;
   font-weight: lighter;
 }
 
 .opportunity-container table .heading {
   font-weight: bold;
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 
 .opportunity-container .edit-link {
@@ -736,7 +778,7 @@
 }
 
 .opportunity-container .back-container div {
-  font-size: 2rem;
+  font-size: 1.6rem;
   margin-left: 10px;
 }
 
@@ -802,6 +844,10 @@
   font-weight: 500;
 }
 
+.opportunity-container .edit-link i {
+  font-size: 40px !important;
+}
+
 .opportunity-container .profile-gallery div {
   height: 183.33px;
   padding: 0.75rem 0.75rem;
@@ -821,7 +867,12 @@
 }
 
 .edit_opportunity_form .input-field {
-  margin: 10px 0;
+  margin: 45px 0px;
+}
+
+.edit_opportunity_form .select-label {
+  -webkit-transform: translateY(-22px) scale(0.8) !important;
+  transform: translateY(-22px) scale(0.8) !important;
 }
 
 .users-section .heading {

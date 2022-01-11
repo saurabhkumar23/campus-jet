@@ -36,8 +36,7 @@ const Routing = () => {
             history.push('/opportunity')
         }
         else{
-            if(!history.location.pathname.startsWith('/resetPass'))
-                history.push('/login')
+            history.push('/login')  
         }
     },[])
 

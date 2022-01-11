@@ -53,9 +53,9 @@ const UserProfile = () => {
                   <div class="card-content">
                     <div className="head">
                         <span class="card-title">{user?.firstName.toUpperCase()}'S PROFILE</span>
-                                <a className="edit-link" href={ `/profile/edit/${user.id}`}> 
+                                <Link className="edit-link" to={ `/profile/edit/${user.id}`}> 
                                     <i class="medium material-icons">edit</i>
-                                </a>
+                                </Link>
                     </div>
                     
                     <table>
@@ -74,7 +74,14 @@ const UserProfile = () => {
                           <td className="heading">Phone</td>
                           <td className="data">{user?.phone}</td>
                         </tr>
-                       
+                        <tr>
+                          <td className="heading">CGPA</td>
+                          <td className="data">{user?.cgpa}</td>
+                        </tr>
+                        <tr>
+                          <td className="heading">Email</td>
+                          <td className="data">{user?.email}</td>
+                        </tr>
                       </tbody>
                     </table>
                   </div>

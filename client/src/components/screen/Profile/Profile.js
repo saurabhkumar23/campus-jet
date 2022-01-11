@@ -8,12 +8,13 @@ const Profile = () => {
   const { state, dispatch } = useContext(UserContext);
   const history = useHistory();
   const { userId } = useParams();
-  console.log(userId);
   //usestates
   const [loading, setLoading] = useState(false);
   const [user, setUser] = useState(null);
   const [isAdmin, setIsAdmin] = useState(false);
   const [isUserAdmin, setIsUserAdmin] = useState(null);
+  const [opportunities, setOpportunities] = useState(null);
+  const [opporData, setOpporData] = useState(null);
 
   useEffect(() => {
     setLoading(true);
@@ -34,7 +35,7 @@ const Profile = () => {
         setLoading(false);
       });
     // admin login then user not allowed
-  }, []);
+  }, [userId]);
 
   useEffect(() => {
     setLoading(true);
@@ -58,7 +59,39 @@ const Profile = () => {
         M.toast({ html: error, classes: "#c62828 red darken-3" });
         setLoading(false);
       });
-  }, []);
+  }, [userId]);
+
+  useEffect(() => {
+    if (user) {
+      setLoading(true);
+      console.log(user);
+      fetch(`/user/${user?.username}/opportunity`, {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("jwt")}`,
+        },
+      })
+        .then((res) => res.json())
+        .then((result) => {
+          if (result?.error) {
+            M.toast({ html: result?.error, classes: "#c62828 red darken-3" });
+            history.push("/opportunity");
+          } else {
+            let arr = [];
+            for (let i = 0; i < result?.length; i++) {
+              let obj = result[i];
+              arr.push(obj?.companyName);
+            }
+            setOpportunities(result);
+            setOpporData(arr.join(", "))
+          }
+          setLoading(false);
+        })
+        .catch((error) => {
+          M.toast({ html: error, classes: "#c62828 red darken-3" });
+          setLoading(false);
+        });
+    }
+  }, [user]);
 
   const userDeleteHandler = () => {
     setLoading(true);
@@ -106,7 +139,7 @@ const Profile = () => {
         M.toast({ html: error, classes: "#c62828 red darken-3" });
         setLoading(false);
       });
-  }
+  };
 
   const removeAdminHandler = () => {
     setLoading(true);
@@ -130,6 +163,33 @@ const Profile = () => {
         M.toast({ html: error, classes: "#c62828 red darken-3" });
         setLoading(false);
       });
+  };
+
+    const exportHandler = () => {
+    setLoading(true);
+    fetch("/excel/opportunity", {
+      method: "post",
+      headers: {
+        Authorization: `Bearer ${localStorage.getItem("jwt")}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        opportunities
+      })
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data?.error) {
+          M.toast({ html: data?.error, classes: "#c62828 red darken-3" });
+        } else {
+          M.toast({ html: data?.message, classes: "#2e7d32 green darken-3" });
+        }
+        setLoading(false);
+      })
+      .catch((error) => {
+        M.toast({ html: error, classes: "#c62828 red darken-3" });
+        setLoading(false);
+      });
   }
 
   return (
@@ -145,11 +205,11 @@ const Profile = () => {
                   <div class="card-content">
                     <div className="head">
                       <span class="card-title">
-                        {user?.firstName.toUpperCase()}'S PROFILE
+                        {user?.firstName?.toUpperCase()}'S PROFILE
                       </span>
                       {isAdmin ? (
                         <div className="delete-div" onClick={userDeleteHandler}>
-                          <i class="medium material-icons">delete</i>
+                          <i class="material-icons">delete</i>
                         </div>
                       ) : null}
                     </div>
@@ -170,26 +230,32 @@ const Profile = () => {
                           <td className="heading">Phone</td>
                           <td className="data">{user?.phone}</td>
                         </tr>
+
+                        <tr>
+                          <td className="heading">Applied</td>
+                          <td className="data">
+                            {opporData}
+                          </td>
+                        </tr>
                       </tbody>
                     </table>
                     <div className="makeAdminButtonContainer">
-                        {
-                            !isUserAdmin ? 
-                            <button
-                            onClick={makeAdminHandler}
-                            className=" apply-link btn btn-large waves-effect waves-light #64b5f6 blue darken-2"
-                            >
-                            Add As Admin
-                            </button>
-                            :
-                            <button
-                            onClick={removeAdminHandler}
-                            className="apply-link btn btn-large waves-effect waves-light #d50000 red accent-4"
-                            >
-                            Remove As Admin
-                            </button>
-                        }
-                      </div>
+                      {!isUserAdmin ? (
+                        <button
+                          onClick={makeAdminHandler}
+                          className=" apply-link btn btn-large waves-effect waves-light #64b5f6 blue darken-2"
+                        >
+                          Add As Admin
+                        </button>
+                      ) : (
+                        <button
+                          onClick={removeAdminHandler}
+                          className="apply-link btn btn-large waves-effect waves-light #d50000 red accent-4"
+                        >
+                          Remove As Admin
+                        </button>
+                      )}
+                    </div>
                   </div>
                 </div>
               </div>
