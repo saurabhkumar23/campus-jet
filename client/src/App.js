@@ -1,5 +1,5 @@
 import React,{createContext,useEffect,useReducer,useContext} from 'react'
-import {BrowserRouter,Redirect,Route,Switch,useHistory} from 'react-router-dom';
+import {BrowserRouter,Link,Redirect,Route,Switch,useHistory} from 'react-router-dom';
 import './App.scss';
 import Navbar from './components/Navbar/Navbar'
 import Home from './components/screen/Home/Home';
@@ -20,6 +20,7 @@ import NewPass from './components/screen/NewPass/NewPass';
 import {reducer,initialState} from './Reducers/userReducer'
 import ErrorPage from './components/screen/ErrorPage';
 import MemeGenerator from './components/screen/MemeGenerator/MemeGenerator';
+import ResumeApp from './resume-container/ResumeApp'
 
 export const UserContext = createContext()
 
@@ -77,6 +78,7 @@ const Routing = () => {
                 <Route exact path='/resetPass' component={ResetPass}/>
                 <Route exact path='/resetPass/:token' component={NewPass}/>
                 <Route exact path='/memeGenerator' component={MemeGenerator}/>
+                <Route exact path='/generateResume' component={ResumeApp}/>
                 <Redirect to="/notFound"/>
             </Switch>
         </>

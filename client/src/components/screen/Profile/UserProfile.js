@@ -82,6 +82,11 @@ const UserProfile = () => {
                           <td className="heading">Email</td>
                           <td className="data">{user?.email}</td>
                         </tr>
+                        <tr>
+                            <td>
+                                <Link to='/generateResume' className="btn #ef5350 red lighten-1">Generate Resume</Link>
+                            </td>
+                        </tr>
                       </tbody>
                     </table>
                   </div>

@@ -48,6 +48,17 @@
   cursor: pointer;
 }
 
+.reset-password-form .password-field {
+  position: relative;
+}
+
+.reset-password-form .password-field span {
+  position: absolute;
+  top: 15px;
+  right: 5px;
+  cursor: pointer;
+}
+
 @media (max-width: 768px) {
   .logo {
     display: none;
