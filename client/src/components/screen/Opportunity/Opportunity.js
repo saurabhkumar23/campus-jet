@@ -201,6 +201,11 @@ const verifyOtp = () => {
 
           </tr>
           <tr>
+          <td className="heading">No. of backlog Allowed</td>
+          <td className="data">{data.noOfBacklogAllowed}</td>
+
+          </tr>
+          <tr>
               <td className="heading">CTC</td>
               <td className="data">{data.ctc}</td>
           </tr>

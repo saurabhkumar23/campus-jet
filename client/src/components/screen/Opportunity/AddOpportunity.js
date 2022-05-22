@@ -16,6 +16,7 @@ const AddOpportunity = () => {
   const [joining, setJoining] = useState("");
   const [bond, setBond] = useState("");
   const [description, setDescription] = useState("");
+  const [noOfBacklogAllowed, setNoOfBacklogAllowed] = useState("");
   const [eligibility, setEligibility] = useState("");
   const [minCgpa, setMinCgpa] = useState("")
   const [employementType, setEmployementType] = useState("");
@@ -65,6 +66,7 @@ const AddOpportunity = () => {
         description,
         eligibility,
         minCgpa,
+        noOfBacklogAllowed,
         employementType,
         location,
         lastDate,
@@ -204,6 +206,15 @@ const AddOpportunity = () => {
                     placeholder="Minimum CGPA Required"
                     value={minCgpa}
                     onChange={(e) => setMinCgpa(e.target.value)}
+                    required
+                  />
+                </div>
+                <div className="input-field">
+                  <input
+                    type="text"
+                    placeholder="Maximum Backlog Allowed"
+                    value={noOfBacklogAllowed}
+                    onChange={(e) => setNoOfBacklogAllowed(e.target.value)}
                     required
                   />
                 </div>

@@ -66,45 +66,45 @@ const Resume = ({ data, onSave }) => {
             // ref={register({ pattern: input.pattern, required: input.required })}
           />
         );
-    }
-    //   case "textarea":
-    //     return (
-    //       <textarea
-    //         class="input"
-    //         name={input.name}
-    //         value={input.value}
-    //         placeholder={input.placeholder}
-    //         onChange={(e) => {
-    //           handleForms(e, input, y, di, index, fi);
-    //         }}
-    //         ref={register({ pattern: input.pattern })}
-    //         style={{ height: "60px" }}
-    //       ></textarea>
-    //     );
-    //     break;
-    //   case "datepicker":
-    //     return (
-    //       <DatePicker
-    //         className="input"
-    //         selected={Date.parse(input.value)}
-    //         onChange={(e) => {
-    //           handleDate(e, input, y, di, index, fi);
-    //         }}
-    //       />
-    //     );
-    //     break;
-    //   case "tag":
-    //     return (
-    //       <Tag
-    //         callback={(data) => {
-    //           handleTag(data, input, y, di, index, fi);
-    //         }}
-    //         vertical={input.vertical}
-    //         data={input.value}
-    //       />
-    //     );
-    //     break;
-    // }
+      case "textarea":
+        return (
+          <textarea
+            class="input"
+            name={input.name}
+            value={input.value}
+            placeholder={input.placeholder}
+            onChange={(e) => {
+              handleForms(e, input, y, di, index, fi);
+            }}
+            ref={register({ pattern: input.pattern })}
+            style={{ height: "60px" }}
+          ></textarea>
+        );
+        break;
+      case "datepicker":
+        return (
+          <DatePicker
+            className="input"
+            selected={Date.parse(input.value)}
+            onChange={(e) => {
+              handleDate(e, input, y, di, index, fi);
+            }}
+          />
+        );
+        break;
+      case "tag":
+        return (
+          <Tag
+            callback={(data) => {
+              handleTag(data, input, y, di, index, fi);
+            }}
+            vertical={input.vertical}
+            data={input.value}
+          />
+        );
+        break;
+  }
+    
   };
 
   const [structure, setStructure] = useState(data);

@@ -82,6 +82,13 @@ const UserProfile = () => {
                           <td className="heading">Email</td>
                           <td className="data">{user?.email}</td>
                         </tr>
+                        {
+                            user?.noOfBacklog &&
+                            <tr>
+                                <td className="heading">Backlogs</td>
+                                <td className="data">{user?.noOfBacklog}</td>
+                            </tr>
+                        }
                         <tr>
                             <td>
                                 <Link to='/generateResume' className="btn #ef5350 red lighten-1">Generate Resume</Link>

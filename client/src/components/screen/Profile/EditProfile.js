@@ -15,6 +15,7 @@ const EditProfile = () => {
   const [lastName, setLastName] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
+  const [noOfBacklog, setNoOfBacklog] = useState("");
 
   useEffect(() => {
     setLoading(true);
@@ -61,6 +62,7 @@ const EditProfile = () => {
         lastName,
         phone,
         email,
+        noOfBacklog,
       }),
     })
       .then((res) => res.json())
@@ -131,6 +133,15 @@ const EditProfile = () => {
                     placeholder="E-mail"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
+                    required
+                  />
+                </div>
+                <div className="input-field">
+                  <input
+                    type="text"
+                    placeholder="No. of backlogs"
+                    value={noOfBacklog}
+                    onChange={(e) => setNoOfBacklog(e.target.value)}
                     required
                   />
                 </div>

@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import Resume from './react-resume-builder/index'
-import './app.sass';
+import './app.scss';
 import Footer from'./footer'
 import data from './resumeSchema'
 const ResumeApp = ()=>{

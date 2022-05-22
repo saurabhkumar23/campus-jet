@@ -14,6 +14,8 @@ const EditOpportunity = () => {
   const [companyName, setCompanyName] = useState("");
   const [applyLink, setApplyLink] = useState("");
   const [ctc, setCtc] = useState("");
+  const [noOfBacklogAllowed, setNoOfBacklogAllowed] = useState("");
+
   const [description, setDescription] = useState("");
   const [eligibility, setEligibility] = useState("");
   const [minCgpa, setMinCgpa] = useState("")
@@ -65,6 +67,7 @@ const EditOpportunity = () => {
           setCompanyName(result?.companyName);
           setApplyLink(result?.applyLink);
           setCtc(result?.ctc);
+          setNoOfBacklogAllowed(result?.noOfBacklogAllowed);
           setDescription(result?.description);
           setEligibility(result?.eligibility);
           setMinCgpa(result?.minCgpa);
@@ -103,6 +106,7 @@ const EditOpportunity = () => {
         description,
         eligibility,
         minCgpa,
+        noOfBacklogAllowed,
         employementType,
         location,
         lastDate,
@@ -296,6 +300,18 @@ const EditOpportunity = () => {
                     id="minCgpa"
                   />
                          <label for="minCgpa" className="active">Minimum CGPA Required</label>
+
+                </div>
+                <div className="input-field">
+                  <input
+                    type="text"
+                    placeholder="Maximum Backlog Allowed"
+                    value={noOfBacklogAllowed}
+                    onChange={(e) => setNoOfBacklogAllowed(e.target.value)}
+                    required
+                    id="maxBackLogs"
+                  />
+                         <label for="maxBackLogs" className="active">Maximum Backlogs Allowed</label>
 
                 </div>
                 <div className="input-field">

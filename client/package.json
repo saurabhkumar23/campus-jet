@@ -6,7 +6,7 @@
     "@testing-library/jest-dom": "^5.11.5",
     "@testing-library/react": "^11.1.1",
     "@testing-library/user-event": "^12.2.0",
-    "bulma": "^0.9.3",
+    "bulma": "^0.9.4",
     "firebase": "^8.2.1",
     "i": "^0.3.7",
     "materialize-css": "^1.0.0-rc.2",
@@ -26,7 +26,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "proxy": "http://8e2d-119-42-58-219.ngrok.io/",
+  "proxy": "http://b725-43-251-93-85.ngrok.io",
   "eslintConfig": {
     "extends": [
       "react-app",
