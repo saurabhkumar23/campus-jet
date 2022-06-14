@@ -1,8 +1,160 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito:400,700");
 .section {
-  padding: 30px;
+  padding: 3rem 3rem !important;
+}
+
+.section .column {
+  padding: 0.75rem;
+  display: block;
+  -ms-flex-preferred-size: 0;
+      flex-basis: 0;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+}
+
+.section .center {
+  text-align: center;
+}
+
+.section .columns {
+  margin-left: -0.75rem;
+  margin-right: -0.75rem;
+  margin-top: -0.75rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.section .is-5 p {
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 3;
+}
+
+.section .title {
+  color: #363636;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.125;
+}
+
+.section .title, .section .subtitle {
+  word-break: break-word;
 }
 
 .section .card {
-  padding: 5px 60px;
+  background-color: white;
+  border-radius: 0.25rem;
+  color: #6b737b;
+  max-width: 100%;
+  position: relative;
+}
+
+.section .card .input, .section .card .textarea {
+  max-width: 100%;
+  width: 100%;
+  border: 1px solid lightgrey !important;
+  border-radius: 6px !important;
+  padding: 1px 12px !important;
+  -webkit-box-sizing: border-box !important;
+          box-sizing: border-box !important;
+}
+
+.section .card .input, .section .card .textarea {
+  background-color: white;
+  border-color: #dbdbdb;
+  border-radius: 4px;
+  color: #363636;
+}
+
+.section .card .button, .section .card .input, .section .card .textarea, .section .card .file-cta, .section .card .file-name {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-size: 1rem;
+  height: 2.5em;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  line-height: 1.5;
+  padding-bottom: calc(0.5em - 1px);
+  padding-left: calc(0.75em - 1px);
+  padding-right: calc(0.75em - 1px);
+  padding-top: calc(0.5em - 1px);
+  position: relative;
+  vertical-align: top;
+}
+
+.section .card .padding15 {
+  padding: 15px;
+}
+
+.section .card .marginBottom5 {
+  margin-bottom: 5px;
+}
+
+.section .card .font20 {
+  font-size: 20px;
+}
+
+.section .card hr.hr1 {
+  border: 2px solid #ebe5e5;
+}
+
+.section .card hr {
+  background-color: whitesmoke;
+  border: none;
+  display: block;
+  height: 2px;
+  margin: 1.5rem 0;
+}
+
+.section .card .react-datepicker__input-container {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.section .card .react-datepicker-wrapper {
+  display: inline-block;
+  padding: 0;
+  border: 0;
+}
+
+.section .card .react-datepicker-wrapper input {
+  width: 30% !important;
+}
+
+.section .card .button {
+  background-color: white;
+  border-color: #dbdbdb;
+  border-width: 1px;
+  color: #363636;
+  cursor: pointer;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: calc(0.5em - 1px);
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: calc(0.5em - 1px);
+  text-align: center;
+  white-space: nowrap;
+}
+
+.section .padding20 {
+  padding: 20px;
 }
 /*# sourceMappingURL=app.css.map */

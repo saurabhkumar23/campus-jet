@@ -205,7 +205,7 @@ const Home = () => {
       {loading || !data ? (
         <Loading />
       ) : (
-        <di className="drives">
+        <div className="drives">
           <div className="container">
             <div className="heading">CAMPUS DRIVES</div>
           </div>
@@ -241,7 +241,7 @@ const Home = () => {
               </div>
             );
           })}
-        </di>
+        </div>
       )}
     </div>
   );

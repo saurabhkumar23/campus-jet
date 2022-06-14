@@ -22,6 +22,9 @@ const AddOpportunity = () => {
   const [employementType, setEmployementType] = useState("");
   const [location, setLocation] = useState("");
   const [lastDate, setlastDate] = useState("");
+  const [interviewDate, setInterviewDate] = useState("");
+  const [resultDate, setResultDate] = useState("");
+
 
   // redirect to home, if already logged in
   useEffect(() => {
@@ -70,6 +73,8 @@ const AddOpportunity = () => {
         employementType,
         location,
         lastDate,
+        interviewDate,
+        resultDate
       }),
     })
       .then((res) => res.json())
@@ -241,6 +246,32 @@ const AddOpportunity = () => {
                     <option value="Part Time">Part Time</option>
                     <option value="Internship">Internship</option>
                   </select>
+                </div>
+                <div style={{ textAlign: "left" }}>
+                  <label for="Interview">Interview Date</label>
+                </div>
+                <div className="input-field">
+                  <input
+                    type="date"
+                    placeholder="Interview"
+                    value={interviewDate}
+                    onChange={(e) => setInterviewDate(e.target.value)}
+                    required
+                    id="Interview"
+                  />
+                </div>
+                <div style={{ textAlign: "left" }}>
+                  <label for="Result">Result Date</label>
+                </div>
+                <div className="input-field">
+                  <input
+                    type="date"
+                    placeholder="Result Date"
+                    value={resultDate}
+                    onChange={(e) => setResultDate(e.target.value)}
+                    required
+                    id="Result"
+                  />
                 </div>
                 <div style={{ textAlign: "left" }}>
                   <label for="last">Last Date To Apply</label>
